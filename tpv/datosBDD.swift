@@ -64,7 +64,7 @@ class webServiceCallApi2 : NSObject {
     
     
     func MFlistadoMensual(_ mes : Int, ano : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFlistado_mensual/" + String(mes) + "/" + String(ano)
+        let url : String = "http://www.marinaferry.info/MFlistado_mensual/" + String(mes) + "/" + String(ano)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -80,7 +80,7 @@ class webServiceCallApiLB2 : NSObject {
     
     
     func LBlistadoMensualB(_ mes : Int, ano : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/LBlistado_mensualB/" + String(mes) + "/" + String(ano)
+        let url : String = "http://www.marinaferry.info/LBlistado_mensualB/" + String(mes) + "/" + String(ano)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -90,7 +90,7 @@ class webServiceCallApiLB2 : NSObject {
     }
     
     func LBlistadoMensual(_ mes : Int, ano : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/LBlistado_mensual/" + String(mes) + "/" + String(ano)
+        let url : String = "http://www.marinaferry.info/LBlistado_mensual/" + String(mes) + "/" + String(ano)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -108,7 +108,7 @@ class webServiceCallAPI: NSObject {
     // url(r'^MFinsertar_ticket/(\d{1,})/$', MFinsertarTicket),
     // data = {'error' : 1, 'tipo error' : 'Error en la grabacion del ticket'}
     func MFinsertar_ticket(_ precio : Float, part : Int) {
-        let url : String = "https://losbarkitos.herokuapp.com/MFinsertar_ticket/" + String(Int(precio * 100)) + "/" + String(part)
+        let url : String = "http://www.marinaferry.info/MFinsertar_ticket/" + String(Int(precio * 100)) + "/" + String(part)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -118,7 +118,7 @@ class webServiceCallAPI: NSObject {
     }
     
     func MFinsertar_ticket_masivo(_ precio : Float, cantidad : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFinsertar_tickets_masivos/" + String(Int(precio * 100)) +
+        let url : String = "http://www.marinaferry.info/MFinsertar_tickets_masivos/" + String(Int(precio * 100)) +
             "/" + String(cantidad)
         Alamofire.request(url)
             .responseJSON { response in
@@ -130,7 +130,7 @@ class webServiceCallAPI: NSObject {
     //url(r'^MFrecuperar_ticket/(\d{1,})/$', MFrecuperarTicket),
     //data = {'error' : 0, 'numero' : numero, 'precio' : float(ticket.precio), 'fecha' : datetime.strftime(ticket.fecha, "%H:%M:%S"), 'punto_venta' : 1, 'vendedor' : 1, 'particular' : ticket.part, 'blanco' : ticket.blanco}
     func MFrecuperar_ticket(_ numero : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFrecuperar_ticket/" + String(numero)
+        let url : String = "http://www.marinaferry.info/MFrecuperar_ticket/" + String(numero)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccinario as [String : AnyObject] = response.result.value {
@@ -142,7 +142,7 @@ class webServiceCallAPI: NSObject {
     //url(r'^MFborrar_ticket/(\d{1,})/$', MFborrarTicket),
     //data = {'error' : 0, 'numero' : numero, 'precio' : float(ticket.precio), 'fecha' : datetime.strftime(ticket.fecha,"%H:%M:%S")}
     func MFborrar_ticket(_ numero : Int, modo : String) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFborrar_ticket/" + String(numero)
+        let url : String = "http://www.marinaferry.info/MFborrar_ticket/" + String(numero)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -153,7 +153,7 @@ class webServiceCallAPI: NSObject {
     
     //
     func MFmodificar_ticket(_ numero : Int, precio : Float) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFmodificar_ticket/" + String(numero) + "/" +
+        let url : String = "http://www.marinaferry.info/MFmodificar_ticket/" + String(numero) + "/" +
                   String(Int(precio + 100)) 
         Alamofire.request(url)
             .responseJSON { response in
@@ -166,7 +166,7 @@ class webServiceCallAPI: NSObject {
     // datos = {'numero' : ticket.numero, 'precio' : float(ticket.precio), 'fecha' : datetime.strftime(ticket.fecha, "%d-%m-%Y %H:%M:%S"), 'punto_venta' : 1, 'vendedor' : 1, 'particular' : ticket.part, 'blanco' : ticket.blanco}
         //dict_tickets[str(i)] = datos
     func MFlistado(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFlistado/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/MFlistado/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -180,7 +180,7 @@ class webServiceCallAPI: NSObject {
     //url(r'^MFeuros/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/$', MFeuros),
     //datos = {'error' : 0, 'total' : total}
     func MFeuros(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFeuros/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/MFeuros/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : Float] = response.result.value {
@@ -193,7 +193,7 @@ class webServiceCallAPI: NSObject {
     ///url(r'^MFmedia/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/$', MFmedia),
     //datos = {'error' : 0, 'media' : media}
     func MFmedia(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFmedia/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/MFmedia/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : Float] = response.result.value {
@@ -206,7 +206,7 @@ class webServiceCallAPI: NSObject {
     }
     
     func MFnumeroTickets(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFnum_tickets/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/MFnum_tickets/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : Int] = response.result.value {
@@ -221,7 +221,7 @@ class webServiceCallAPI: NSObject {
     ///  url(r'^MFestadisticas/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/$'
     /// datos = {'error' : 0, 'media' : media, 'total_tickets' : total_tickets, 'euros' : total_euros}
     func MFestadisticas(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/MFestadisticas/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/MFestadisticas/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -237,7 +237,7 @@ class webServiceCallAPI_LB: NSObject {
     var delegate : datosBDD_LB?
     
     func LBlistado(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/LBlistado/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/LBlistado/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -248,7 +248,7 @@ class webServiceCallAPI_LB: NSObject {
     }
     
     func LBlistadoB(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/LBlistadoB/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/LBlistadoB/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -260,7 +260,7 @@ class webServiceCallAPI_LB: NSObject {
 
     // Devuelve las estadisticas de la oficina en negro
     func LBestadisticas(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/LBestadisticas/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/LBestadisticas/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -273,7 +273,7 @@ class webServiceCallAPI_LB: NSObject {
     
     // Devuelve las estadisticas de la oficina en blanco
     func LBestadisticasB(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/LBestadisticasB/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/LBestadisticasB/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -286,7 +286,7 @@ class webServiceCallAPI_LB: NSObject {
     
     // Devuelve estadisticas totales en negro
     func LBestadisticasTotales(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/LBestadisticasTotales/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/LBestadisticasTotales/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -299,7 +299,7 @@ class webServiceCallAPI_LB: NSObject {
     
     // Devuelve estadisticas totales en blanco
     func LBestadisticasTotalesB(_ diaI : Int, mesI : Int, anyoI : Int, diaF : Int, mesF : Int, anyoF : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/LBestadisticasTotalesB/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
+        let url : String = "http://www.marinaferry.info/LBestadisticasTotalesB/" + String(diaI) + "/" + String(mesI) + "/" + String(anyoI) + "/" + String(diaF) + "/" + String(mesF) + "/" + String(anyoF)
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -314,7 +314,7 @@ class webServiceCallAPI_LB: NSObject {
     // Inserta un viaje en la BDD de LB. Si blanco = 1 el tiquet es blanco
     func LBinsertar_viaje(_ precio : Float, tipo : Int, blanco : Int = 1) {
         let pre = String(Int(precio * 100))
-        let url : String = "https://losbarkitos.herokuapp.com/LBinsertar_viaje/" + pre + "/" + String(tipo) + "/" +  String(blanco)
+        let url : String = "http://www.marinaferry.info/LBinsertar_viaje/" + pre + "/" + String(tipo) + "/" +  String(blanco)
         Alamofire.request(url)
             .responseJSON { response in
                 //print(response.result.value)
@@ -327,7 +327,7 @@ class webServiceCallAPI_LB: NSObject {
     }
     
     func LBreservasDia() {
-        let url : String = "http://losbarkitos.herokuapp.com/barcas_dia"
+        let url : String = "http://www.marinaferry.info/barcas_dia"
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -338,7 +338,7 @@ class webServiceCallAPI_LB: NSObject {
     }
     
     func cierre() {
-        let url : String = "http://losbarkitos.herokuapp.com/cierre_dia"
+        let url : String = "http://www.marinaferry.info/cierre_dia"
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : String] = response.result.value {
@@ -348,7 +348,7 @@ class webServiceCallAPI_LB: NSObject {
     }
     
     func LBincrementarReserva(tipo : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/incrementar_reserva/" + String(tipo) + "/"
+        let url : String = "http://www.marinaferry.info/incrementar_reserva/" + String(tipo) + "/"
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -365,7 +365,7 @@ class webServiceCallApiR : NSObject {
     var delegate : datosBDD_R?
     
     func LBnumeroReserva(_ tipo : Int) {
-        let url : String = "http://losbarkitos.herokuapp.com/reserva/" + String(tipo) + "/1"
+        let url : String = "http://www.marinaferry.info/reserva/" + String(tipo) + "/1"
         Alamofire.request(url)
             .responseJSON { response in
                 if case let diccionario as [String : AnyObject] = response.result.value {
@@ -389,7 +389,7 @@ class webServiceCallApiLS : NSObject {
             } else if tipo == 3 {
                 tipo_barca = "Gold"
             }
-            let url : String = "http://losbarkitos.herokuapp.com/listado_reservas/" + String(tipo_barca)
+            let url : String = "http://www.marinaferry.info/listado_reservas/" + String(tipo_barca)
         
             Alamofire.request(url)
                 .responseJSON { response in
