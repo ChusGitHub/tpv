@@ -3863,7 +3863,7 @@ WWW.MARINAFERRY.ES</string>
                                 </view>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUK-md-cdv">
-                                <rect key="frame" x="596" y="752" width="133" height="32"/>
+                                <rect key="frame" x="597" y="752" width="133" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Contadores a 0" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="ls1-eT-Mw1">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
