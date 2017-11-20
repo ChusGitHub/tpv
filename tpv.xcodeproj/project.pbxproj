@@ -15,6 +15,7 @@
 		BB19219E1CCA7F2A000A30F5 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19219D1CCA7F2A000A30F5 /* TicketViewController.swift */; };
 		BB33DB771CAAA67C002C9FB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8458C61C295DEF0024C33D /* Main.storyboard */; };
 		BB33DB781CAAA682002C9FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B8458C41C295DEF0024C33D /* Assets.xcassets */; };
+		BB354AA11FC2CF2900DCAAA5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBA8FE6F1FC04D3F00970EC9 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB4A16411CB27ED6002C7DF1 /* Viaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A16401CB27ED6002C7DF1 /* Viaje.swift */; };
 		BB6E7E2D1CB410880098C9D3 /* imprimirListadoLBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E7E2C1CB410880098C9D3 /* imprimirListadoLBViewController.swift */; };
 		BB97F6E71CB6934400ECFB07 /* mensualListadoLBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB97F6E61CB6934400ECFB07 /* mensualListadoLBViewController.swift */; };
@@ -33,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BB354A971FC2CF1400DCAAA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBA8FE5F1FC04D3F00970EC9 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DD67C0A1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
 		BBA8FE6A1FC04D3F00970EC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BBA8FE5F1FC04D3F00970EC9 /* Alamofire.xcodeproj */;
@@ -91,6 +99,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BB354AA11FC2CF2900DCAAA5 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -243,6 +252,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BB354A981FC2CF1400DCAAA5 /* PBXTargetDependency */,
 			);
 			name = tpv;
 			productName = tpv;
@@ -386,6 +396,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB354A981FC2CF1400DCAAA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire macOS";
+			targetProxy = BB354A971FC2CF1400DCAAA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4B8458C61C295DEF0024C33D /* Main.storyboard */ = {
