@@ -9,7 +9,7 @@
 import Cocoa
 
 open class Ticket: NSObject {
-    
+    var idticket : Int = 0
     var numero : Int = 0
     var fecha : String = ""
     var precio : Float = 0.0
