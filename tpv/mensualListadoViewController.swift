@@ -102,7 +102,7 @@ class mensualListadoViewController: NSViewController, datosBBD2, NSTableViewData
         
         
         let mes = self.mesComboBox.indexOfSelectedItem + 1
-        webService.MFlistadoMensual(mes, ano: 17)
+        webService.MFlistadoMensual(mes, ano: 18)
         
         self.mesNSTextField.stringValue = self.mesComboBox.stringValue
         self.mesNSview.isHidden = true
