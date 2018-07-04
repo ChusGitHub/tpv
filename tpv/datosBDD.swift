@@ -107,6 +107,9 @@ class webServiceCallAPI: NSObject {
 
     // url(r'^MFinsertar_ticket/(\d{1,})/$', MFinsertarTicket),
     // data = {'error' : 1, 'tipo error' : 'Error en la grabacion del ticket'}
+    // part = 0 => ticket grupo
+    // part = 1 => ticket particular
+    // part = 2 => ticket de barkito
     func MFinsertar_ticket(_ precio : Float, part : Int) {
         let url : String = "http://www.marinaferry.info/MFinsertar_ticket/" + String(Int(precio * 100)) + "/" + String(part)
         Alamofire.request(url)
