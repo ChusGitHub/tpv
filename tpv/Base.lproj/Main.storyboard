@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -712,7 +712,6 @@ CQ
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message" size="14"/>
-                        <tabViewItems/>
                         <connections>
                             <outlet property="delegate" destination="YFd-uM-zqg" id="fv8-sf-bMh"/>
                         </connections>
@@ -1138,7 +1137,7 @@ CQ
         <scene sceneID="NBE-MG-SaR">
             <objects>
                 <viewController title="MARINAFERRY" id="oxq-Bs-qxr" customClass="MFViewController" customModule="tpv" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" horizontalHuggingPriority="244" id="QvI-0d-4FF">
+                    <view key="view" horizontalHuggingPriority="244" id="QvI-0d-4FF">
                         <rect key="frame" x="0.0" y="0.0" width="1214" height="793"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -1315,7 +1314,7 @@ CQ
                                 </shadow>
                             </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="111" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="99K-m1-SKR">
-                                <rect key="frame" x="20" y="663" width="213" height="75"/>
+                                <rect key="frame" x="40" y="663" width="149" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" title="Ticket Particular" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zyg-mP-iR3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1326,7 +1325,7 @@ CQ
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="111" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="Onb-VA-TOM">
-                                <rect key="frame" x="307" y="663" width="213" height="75"/>
+                                <rect key="frame" x="188" y="663" width="149" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" title="Ticket Grupo" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0uf-sq-M9h">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2001,9 +2000,51 @@ DQ
                                 <rect key="frame" x="503" y="79" width="5" height="652"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="111" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="QgJ-r9-DNI" userLabel="Ticket Barkito">
+                                <rect key="frame" x="334" y="663" width="149" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" title="Barkito" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="exV-iC-DMY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="18" name="HelveticaNeue-Bold"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="barkitoPushButton:" target="oxq-Bs-qxr" id="izx-rx-ZPf"/>
+                                </connections>
+                            </button>
+                            <customView wantsLayer="YES" fixedFrame="YES" alphaValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="up2-Dx-e5r">
+                                <rect key="frame" x="345" y="739" width="161" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lSq-6p-ZPt">
+                                        <rect key="frame" x="7" y="4" width="96" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="znS-R0-oJc">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAJ-IN-MAM">
+                                        <rect key="frame" x="100" y="8" width="59" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2zI-au-QmT">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="okTicketBarkitoPushButton:" target="oxq-Bs-qxr" id="YHY-Ad-RSc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </customView>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="barkitoButton" destination="QgJ-r9-DNI" id="W30-hv-Kqq"/>
+                        <outlet property="barkitoPushButton" destination="QgJ-r9-DNI" id="Kx1-it-oJu"/>
                         <outlet property="baseTicketNSTextField" destination="HuK-fS-iyi" id="Lsv-3I-3sC"/>
                         <outlet property="borrarTicketNSButton" destination="1pb-MR-ghC" id="r9X-WN-wLO"/>
                         <outlet property="botonesTicketNSview" destination="f0a-iT-cJ1" id="t4Q-Kw-hZA"/>
@@ -2033,6 +2074,7 @@ DQ
                         <outlet property="okNuevoPrecioPushButton" destination="qH3-Xk-QCh" id="JIU-3a-lCx"/>
                         <outlet property="precioGruposView" destination="klj-nL-yNZ" id="fro-6C-eIr"/>
                         <outlet property="precioIndividualView" destination="aGo-Gc-e0M" id="yob-Hn-ebn"/>
+                        <outlet property="precioTicketBarkito" destination="lSq-6p-ZPt" id="AiQ-iy-bY6"/>
                         <outlet property="precio_10_Grupos" destination="Tn6-3i-Xvi" id="XZn-dx-QF6"/>
                         <outlet property="precio_10_Individual" destination="pCO-WH-IGh" id="TMh-8W-oiM"/>
                         <outlet property="precio_11_Grupos" destination="Rgc-ff-Oww" id="P36-59-FFP"/>
@@ -2049,6 +2091,7 @@ DQ
                         <outlet property="precio_raro" destination="toJ-V7-x3I" id="skq-sY-h79"/>
                         <outlet property="salirTicketNSButton" destination="gJy-ln-pYQ" id="xaJ-fA-EJg"/>
                         <outlet property="ticketNSView" destination="kUz-Ce-Ueu" id="aAh-4K-jv9"/>
+                        <outlet property="ticketsBarkitosView" destination="up2-Dx-e5r" id="Vtk-yL-YoX"/>
                         <outlet property="ticketsMasivosNSView" destination="2Em-xh-RJX" id="mXN-k6-eSq"/>
                         <outlet property="totalEuros" destination="rKY-9F-hTN" id="o7C-sD-buH"/>
                         <outlet property="totalEurosNSTextField" destination="rKY-9F-hTN" id="85N-6V-EcJ"/>

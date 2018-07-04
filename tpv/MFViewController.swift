@@ -61,6 +61,9 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
     
     @IBOutlet weak var individualButton: NSButton!
     @IBOutlet weak var gruposButton: NSButton!
+    @IBOutlet weak var barkitoButton: NSButton!
+    @IBOutlet weak var precioTicketBarkito: NSTextField!
+    @IBOutlet weak var ticketsBarkitosView: NSView!
     
     @IBOutlet weak var precio_6_Individual: NSButton!
     @IBOutlet weak var precio_8_Individual: NSButton!
@@ -197,7 +200,23 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
         }
     }
     
+    @IBOutlet weak var barkitoPushButton: NSButton!
+    @IBAction func barkitoPushButton(_ sender: NSButton) {
+        if self.ticketsBarkitosView.alphaValue == 0 {
+            self.ticketsBarkitosView.alphaValue = 1
+        } else {
+            self.ticketsBarkitosView.alphaValue = 0
+        }
+        
+    }
     
+    @IBAction func okTicketBarkitoPushButton(_ sender: NSButton) {
+        if self.precioTicketBarkito.stringValue != "" && self.precioTicketBarkito.stringValue != "0" {
+            webService.MFinsertar_ticket(Float(self.precioTicketBarkito.stringValue)!, part: 2)
+        }
+        
+        
+    }
     @IBAction func precioIndividualPushButton(_ sender: NSButton) {
         if let precio : Float = Float(sender.title) {
             webService.MFinsertar_ticket(precio, part: 1) // Si parametro = 1 es particular
@@ -317,6 +336,7 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
         
         self.precioIndividualView.isHidden = true
         self.precioGruposView.isHidden = true
+        self.ticketsBarkitosView.alphaValue = 0
         
         self.precioIndividualView.setFrameOrigin(NSPoint(x : 20, y : 325))
         self.precioGruposView.setFrameOrigin(NSPoint(x : 20, y : 325))
