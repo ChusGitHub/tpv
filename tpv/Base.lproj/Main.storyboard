@@ -2003,7 +2003,7 @@ DQ
                             <button verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="111" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="QgJ-r9-DNI" userLabel="Ticket Barkito">
                                 <rect key="frame" x="334" y="663" width="149" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" title="Barkito" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="exV-iC-DMY">
+                                <buttonCell key="cell" type="square" title="Barkito" bezelStyle="shadowlessSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="exV-iC-DMY">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="18" name="HelveticaNeue-Bold"/>
                                 </buttonCell>
@@ -2043,7 +2043,6 @@ DQ
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="barkitoButton" destination="QgJ-r9-DNI" id="W30-hv-Kqq"/>
                         <outlet property="barkitoPushButton" destination="QgJ-r9-DNI" id="Kx1-it-oJu"/>
                         <outlet property="baseTicketNSTextField" destination="HuK-fS-iyi" id="Lsv-3I-3sC"/>
                         <outlet property="borrarTicketNSButton" destination="1pb-MR-ghC" id="r9X-WN-wLO"/>

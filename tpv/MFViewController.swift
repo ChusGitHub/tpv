@@ -61,7 +61,7 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
     
     @IBOutlet weak var individualButton: NSButton!
     @IBOutlet weak var gruposButton: NSButton!
-    @IBOutlet weak var barkitoButton: NSButton!
+    @IBOutlet weak var barkitoPushButton: NSButton!
     @IBOutlet weak var precioTicketBarkito: NSTextField!
     @IBOutlet weak var ticketsBarkitosView: NSView!
     
@@ -180,6 +180,7 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
             self.precioIndividualView.isHidden = false
             self.precioGruposView.isHidden = true
             self.gruposButton.state = NSOffState
+            self.ticketsBarkitosView.alphaValue = 0
         } else {
             self.precioIndividualView.isHidden = true
             self.precioGruposView.isHidden = true
@@ -193,6 +194,7 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
             self.precioIndividualView.isHidden = true
             self.individualButton.state = NSOffState
             self.ticketsMasivosNSView.alphaValue = 1
+            self.ticketsBarkitosView.alphaValue = 0
         } else {
             self.precioGruposView.isHidden = true
             self.precioIndividualView.isHidden = true
@@ -200,12 +202,17 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
         }
     }
     
-    @IBOutlet weak var barkitoPushButton: NSButton!
-    @IBAction func barkitoPushButton(_ sender: NSButton) {
+    @IBAction func barkitoPushButton(_ sender: NSButtonCell) {
         if self.ticketsBarkitosView.alphaValue == 0 {
             self.ticketsBarkitosView.alphaValue = 1
+            self.precioGruposView.isHidden = true
+            self.precioIndividualView.isHidden = true
+            self.barkitoPushButton.state = NSOnState
+            self.individualButton.state = NSOffState
+            self.gruposButton.state = NSOffState
         } else {
             self.ticketsBarkitosView.alphaValue = 0
+            self.barkitoPushButton.state = NSOnState
         }
         
     }
@@ -667,6 +674,10 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
         } else {
             self.descripcionTicketNSTextField.stringValue = "1 ticket adulto grupo"
             self.grupoParticularTicketNSTextField.stringValue = "GRUPO"
+        }
+        if tic.precio > 20.00 {
+            self.descripcionTicketNSTextField.stringValue = "Alquiler barco 1 hora"
+            self.grupoParticularTicketNSTextField.stringValue = "ALQUILER BARKITO"
         }
     }
     
