@@ -492,8 +492,11 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
                 registro["fecha"] = formato.string(from: fec!) as AnyObject?
                 //registro["fecha"] = v["fecha"] as! String
                 
-                registro["precio"] = v["precio"] as! Float as AnyObject?
-            
+               // registro["precio"] = v["precio"] as! Float as AnyObject?
+                // ESTA PARTE ESTA MODIFICADA Y NO ESTA COMPILADA EN PRODUCCION
+                // ESTA SUBIDA A GITHUB
+                registro["precio"] = v["precio"] as! NSNumber
+                let precio = registro["precio"]?.floatValue
                 self.listadoTickets.append(registro)
                 
                 // Insercion en la lista para impresion
@@ -501,7 +504,8 @@ class MFViewController: NSViewController, datosBDD, NSTableViewDataSource, NSTab
         
                 t.numero = registro["numero"] as! Int
                 t.fecha  = registro["fecha"] as! String
-                t.precio = registro["precio"] as! Float
+                //t.precio = registro["precio"] as! Float
+                t.precio = precio!
                 t.punto  = registro["punto_venta"] as! String
                 
                 tickets.append(t)
