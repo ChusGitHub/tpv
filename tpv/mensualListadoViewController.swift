@@ -150,9 +150,12 @@ class mensualListadoViewController: NSViewController, datosBBD2, NSTableViewData
             if k != "error" && k != "numero_dias" {
                 registro["fecha"]    = v["fecha"] as! String as AnyObject?
                 registro["cantidad"] = v["viajes"] as! Int as AnyObject?
-                registro["base"]     = v["neto"] as! Float as AnyObject?
-                registro["iva"]      = v["iva"] as! Float as AnyObject?
-                registro["bruto"]    = v["total"] as! Float as AnyObject?
+                registro["base"]     = v["neto"] as! NSNumber
+                //registro["base"]     = v["neto"] as! Float as AnyObject?
+                registro["iva"]      = v["iva"] as! NSNumber
+                //registro["iva"]      = v["iva"] as! Float as AnyObject?
+                registro["bruto"]    = v["total"] as! NSNumber
+                //registro["bruto"]    = v["total"] as! Float as AnyObject?
                 
                 self.listado.append(registro)
             }
@@ -193,15 +196,18 @@ class mensualListadoViewController: NSViewController, datosBBD2, NSTableViewData
                 text = String(describing: item["cantidad"]!)
                 celdaIdentificador = "cantidadID"
             } else if tableColumn == tableView.tableColumns[2] {
-                self.totalNeto += item["base"] as! Float
+                //self.totalNeto += item["base"] as! Float
+                self.totalNeto += Float(item["base"] as! NSNumber)
                 text = formato.string(from: item["base"] as! NSNumber)!
                 celdaIdentificador = "baseID"
             } else if tableColumn == tableView.tableColumns[3] {
-                self.totalIVA += item["iva"] as! Float
+                //self.totalIVA += item["iva"] as! Float
+                self.totalIVA += Float(item["iva"] as! NSNumber)
                 text = formato.string(from: item["iva"] as! NSNumber)!
                 celdaIdentificador = "ivaID"
             } else {
-                self.totalBruto += item["bruto"] as! Float
+                //self.totalBruto += item["bruto"] as! Float
+                self.totalBruto += Float(item["bruto"] as! NSNumber)
                 text = formato.string(from: item["bruto"] as! NSNumber)!
                 celdaIdentificador = "brutoID"
             }
